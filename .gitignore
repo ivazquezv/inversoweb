@@ -1,0 +1,38 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Carpetas de sistema de macOS
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Archivos de editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node (por si en el futuro usas herramientas)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Compilaciones o builds (si algún día usas bundlers)
+dist/
+build/
+
+# Archivos de entorno (si usas variables locales)
+.env
+.env.local
+.env.*.local
+
+# Archivos de sistema Linux
+*~
