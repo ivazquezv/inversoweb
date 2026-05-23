@@ -1,1035 +1,840 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IN VERSO | Melodic Death Metal</title>
-    <meta
-      name="description"
-      content="IN VERSO es una banda de melodic death metal. Escucha su música, descubre sus vídeos y conoce a la banda."
-    />
+<head>
+  <meta charset="UTF-8" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IN VERSO | Melodic Death Metal</title>
+  <meta name="description"
+    content="IN VERSO es una banda de melodic death metal. Escucha su música, descubre sus vídeos y conoce a la banda." />
 
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Inter:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container site-header__inner">
-        <a href="#top" class="site-header__logo">
-          <img
-            src="images/logo.png"
-            alt="IN VERSO Logo"
-            class="site-header__logo-img"
-          />
-        </a>
+  <link rel="stylesheet" href="css/styles.css" />
 
-        <nav class="main-nav" aria-label="Navegación principal">
-          <button
-            class="main-nav__toggle"
-            aria-expanded="false"
-            aria-label="Abrir menú"
-          >
-            <span class="main-nav__toggle-line"></span>
-            <span class="main-nav__toggle-line"></span>
-          </button>
-          <ul class="main-nav__list">
-            <li><a href="#home" class="main-nav__link">Inicio</a></li>
-            <li><a href="#band" class="main-nav__link">Banda</a></li>
-            <li><a href="#biografia" class="main-nav__link">Biografía</a></li>
-            <li><a href="#music" class="main-nav__link">Música</a></li>
-            <li><a href="#media" class="main-nav__link">Vídeos</a></li>
-            <li><a href="#prensa" class="main-nav__link">Prensa</a></li>
-            <li><a href="#contact" class="main-nav__link">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Inter:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <!--barra de progreso-->
-      <div id="progress-bar"></div>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#top" class="site-header__logo">
+        <img src="images/logo.png" alt="IN VERSO Logo" class="site-header__logo-img" />
+      </a>
 
-    <main id="top">
-      <!-- HERO -->
-      <section id="home" class="hero">
-        <div class="container hero__inner">
-          <div class="hero__content">
-            <p class="hero__kicker">Melodic Death Metal</p>
-            <h1 class="hero__title">IN VERSO</h1>
-            <p class="hero__subtitle">
-              Sonido pesado, melodías oscuras y una propuesta que cruza la
-              frontera entre lo brutal y lo atmosférico.
-            </p>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="main-nav__toggle" aria-expanded="false" aria-label="Abrir menú">
+          <span class="main-nav__toggle-line"></span>
+          <span class="main-nav__toggle-line"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li><a href="#home" class="main-nav__link">Inicio</a></li>
+          <li><a href="#band" class="main-nav__link">Banda</a></li>
+          <li><a href="#biografia" class="main-nav__link">Biografía</a></li>
+          <li><a href="#music" class="main-nav__link">Música</a></li>
+          <li><a href="#media" class="main-nav__link">Vídeos</a></li>
+          <li><a href="#prensa" class="main-nav__link">Prensa</a></li>
+          <li><a href="#contact" class="main-nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-            <div class="hero__actions">
-              <a
-                href="https://open.spotify.com/intl-es/album/3hwivkhpVZwyK7UWO0zmHZ"
-                target="_blank"
-                class="btn btn--primary"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  style="margin-right: 8px"
-                >
-                  <path
-                    d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12s12-5.372 12-12c0-6.627-5.373-12-12-12zm5.485 17.318a.747.747 0 0 1-1.027.248c-2.811-1.72-6.34-2.107-10.508-1.155a.748.748 0 1 1-.33-1.46c4.57-1.034 8.482-.588 11.64 1.32a.747.747 0 0 1 .225 1.047zm1.47-3.259a.935.935 0 0 1-1.285.31c-3.219-1.993-8.13-2.574-11.93-1.41a.935.935 0 1 1-.55-1.79c4.34-1.335 9.78-.695 13.47 1.57a.935.935 0 0 1 .295 1.32zm.13-3.396c-3.74-2.22-10.01-2.427-13.63-1.33a1.12 1.12 0 1 1-.66-2.14c4.19-1.29 11.12-1.04 15.39 1.52a1.12 1.12 0 0 1-1.1 1.95z"
-                  />
-                </svg>
-                Escuchar en Spotify
-              </a>
+  <!--barra de progreso-->
+  <div id="progress-bar"></div>
 
-              <a href="#media" class="btn btn--ghost">Ver vídeos</a>
-            </div>
+  <main id="top">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__kicker">Melodic Death Metal</p>
+          <h1 class="hero__title">IN VERSO</h1>
+          <p class="hero__subtitle">
+            Sonido pesado, melodías oscuras y una propuesta que cruza la
+            frontera entre lo brutal y lo atmosférico.
+          </p>
 
-            <div class="hero__meta">
-              <span class="hero__meta-label">Último lanzamiento:</span>
-              <span class="hero__meta-value"
-                >Acoustic Letter of Dreams 8D – IN VERSO · 2025</span
-              >
-            </div>
+          <div class="hero__actions">
+            <a href="https://open.spotify.com/intl-es/album/3hwivkhpVZwyK7UWO0zmHZ" target="_blank"
+              class="btn btn--primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
+                style="margin-right: 8px">
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12s12-5.372 12-12c0-6.627-5.373-12-12-12zm5.485 17.318a.747.747 0 0 1-1.027.248c-2.811-1.72-6.34-2.107-10.508-1.155a.748.748 0 1 1-.33-1.46c4.57-1.034 8.482-.588 11.64 1.32a.747.747 0 0 1 .225 1.047zm1.47-3.259a.935.935 0 0 1-1.285.31c-3.219-1.993-8.13-2.574-11.93-1.41a.935.935 0 1 1-.55-1.79c4.34-1.335 9.78-.695 13.47 1.57a.935.935 0 0 1 .295 1.32zm.13-3.396c-3.74-2.22-10.01-2.427-13.63-1.33a1.12 1.12 0 1 1-.66-2.14c4.19-1.29 11.12-1.04 15.39 1.52a1.12 1.12 0 0 1-1.1 1.95z" />
+              </svg>
+              Escuchar en Spotify
+            </a>
+
+            <a href="#media" class="btn btn--ghost">Ver vídeos</a>
           </div>
 
-          <div
-            class="hero__media"
-            style="position: relative; overflow: hidden; display: inline-block"
-          >
-            <div
-              class="hero__placeholder"
-              style="position: relative; display: inline-block"
-            >
-              <img
-                src="images/in-verso-corvus-banda.png"
-                alt="Foto de la banda In.Verso Corvus"
-                style="
+          <div class="hero__meta">
+            <span class="hero__meta-label">Último lanzamiento:</span>
+            <span class="hero__meta-value">Acoustic Letter of Dreams 8D – IN VERSO · 2025</span>
+          </div>
+        </div>
+
+        <div class="hero__media" style="position: relative; overflow: hidden; display: inline-block">
+          <div class="hero__placeholder" style="position: relative; display: inline-block">
+            <img src="images/in-verso-corvus-banda.png" alt="Foto de la banda In.Verso Corvus" style="
                   width: 100%;
                   height: auto;
                   display: block;
                   transition: all 0.4s ease;
                   position: relative;
                   z-index: 2;
-                "
-                onmouseover="this.style.boxShadow='inset 0 0 120px 40px rgba(255,0,0,0.8)'"
-                onmouseout="this.style.boxShadow='none'"
-              />
-            </div>
+                " onmouseover="this.style.boxShadow='inset 0 0 120px 40px rgba(255,0,0,0.8)'"
+              onmouseout="this.style.boxShadow='none'" />
           </div>
         </div>
-      </section>
-
-      <!-- BANDA -->
-      <section id="band" class="section section--alt">
-        <div class="container section__inner">
-          <header class="section__header">
-            <h2 class="section__title">La banda</h2>
-          </header>
-
-          <div class="section__intro">
-            <p>
-              In Verso surgió como una de las propuestas más singulares del
-              death metal melódico español a comienzos de la década de 2010.
-              Fundada en Madrid por Iván Vázquez (guitarra y composición) y
-              Eduardo Guilló (voz y bajo), la banda desarrolló un sonido propio
-              que combinaba la agresividad del death metal tradicional con
-              atmósferas introspectivas y un marcado enfoque progresivo.
-            </p>
-
-            <p>
-              Su único álbum de estudio, <em>Corvus Corax</em> (2013), se
-              convirtió en una referencia dentro de la escena nacional gracias a
-              su ambición compositiva y su cuidada producción. Aunque la
-              actividad del proyecto cesó oficialmente en 2016, su legado
-              permanece como un ejemplo de creatividad, técnica y sensibilidad
-              dentro del metal extremo contemporáneo.
-            </p>
-
-            <p>
-              In Verso representa una generación de músicos técnicamente
-              virtuosos. <em>Corvus Corax</em> permanece como testimonio de una
-              era donde el death metal comenzaba a hibridarse con géneros más
-              experimentales, sentando bases para el actual auge del post-metal
-              ibérico.
-            </p>
-
-            <p>
-              La banda demostró que era posible articular narrativas complejas
-              en castellano dentro del marco del metal extremo, influyendo en
-              formaciones posteriores como Teitanfist y Dawn of Twilight. Su
-              énfasis en la producción de calidad y el lirismo elevado
-              estableció nuevos estándares para el género a nivel nacional,
-              aunque su impacto internacional quedó limitado por factores
-              geográficos y temporales. <em>Corvus Corax</em> sigue ofreciendo
-              nuevas capas de significado con cada escucha, confirmando a In
-              Verso como uno de los proyectos más importantes del metal español
-              contemporáneo.
-            </p>
-          </div>
-
-          <div class="grid grid--2cols">
-            <article id="biografia" class="card">
-              <h3 class="card__title">Biografía</h3>
-              <p class="card__text">
-                In Verso fue una banda de death metal melódico originaria de
-                Madrid, activa entre 2010 y 2016. Fundada por Iván Vázquez
-                (guitarrista y compositor) y Eduardo Guilló (vocalista y
-                bajista), el proyecto destacó por su energía, su enfoque
-                melódico y su capacidad para combinar agresividad y sensibilidad
-                dentro del género.
-                <br /><br />
-                En sus grabaciones de estudio, la batería fue interpretada por
-                Alfred Berengena (baterista de S.A.), mientras que en directo
-                contaron con músicos invitados tanto en la guitarra rítmica como
-                en la batería, aportando un alto nivel técnico y una puesta en
-                escena sólida.
-                <br /><br />
-                Aunque la banda cesó su actividad en 2016, sus integrantes
-                mantienen contacto y dejan como legado su álbum
-                <em>Corvux Corax</em>, grabado en PKO Studio de Madrid bajo la
-                producción de Emilio Mercader. Este trabajo resume la esencia y
-                el compromiso musical que definieron a In Verso durante toda su
-                trayectoria.
-              </p>
-            </article>
-
-            <article class="card">
-              <h3 class="card__title">Miembros</h3>
-              <ul class="card__list">
-<li>
-  <strong>Iván Vázquez</strong> — Guitarrista / Compositor
-  <br />
-  <span class="card__text">
-    Principal responsable de la composición y la dirección musical. Su estilo combina riffs agresivos con pasajes melódicos y estructuras progresivas.
-  </span>
-  <br />
-  <a href="ivan_vazquez.html" class="btn-member">Saber más</a>
-</li>
-<br />
-
-<li>
-  <strong>Eduardo Guilló</strong> — Bajo / Voz
-  <br />
-  <span class="card__text">
-    Vocalista y bajista con un registro versátil, capaz de alternar entre guturales profundos y líneas melódicas. Su presencia escénica definió la identidad del grupo.
-  </span>
-  <br />
-  <a href="edu.html" class="btn-member">Saber más</a>
-</li>
-<br />
-
-<li>
-  <strong>Batería</strong> — Alfred Berengena / Diego Morales
-  <br />
-  <span class="card__text">
-    Alfred grabó la batería en estudio aportando precisión y contundencia. En directo, Diego Morales y otros músicos invitados reforzaron el sonido con técnica y dinamismo.
-  </span>
-  <br />
-  <a href="bateria.html" class="btn-member">Saber más</a>
-</li>
-
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- MÚSICA -->
-      <section id="music" class="section">
-        <div class="container section__inner">
-          <header class="section__header">
-            <h2 class="section__title">Música</h2>
-            <p class="section__subtitle">
-              Escucha IN VERSO en tu plataforma favorita.
-            </p>
-          </header>
-
-          <div class="grid grid--3cols">
-            <article class="release-card">
-              <!-- CANCIÓN 1-->
-              <div class="release-card__cover">
-                <img
-                  src="images/portada-corvus-corax- in-verso.jpg"
-                  alt="Portada del disco Corvus Corax de IN VERSO"
-                />
-              </div>
-
-              <h3 class="release-card__title">Corvus Corax · 2013</h3>
-              <p class="release-card__meta">Preview Álbum EP</p>
-
-              <div class="release-card__actions">
-                <!-- Spotify -->
-                <a
-                  href="https://open.spotify.com/intl-es/album/3hwivkhpVZwyK7UWO0zmHZ"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12s12-5.372 12-12C24 5.373 18.627 0 12 0zm5.485 17.338a.748.748 0 01-1.03.246c-2.82-1.73-6.36-2.12-10.57-1.17a.75.75 0 11-.32-1.46c4.57-1 8.52-.57 11.66 1.36.36.22.48.69.26 1.02zm1.47-3.26a.94.94 0 01-1.29.31c-3.23-1.99-8.15-2.57-11.94-1.42a.94.94 0 11-.54-1.8c4.3-1.29 9.77-.64 13.39 1.61.44.27.58.85.29 1.3zm.13-3.45c-3.76-2.23-10-2.43-13.63-1.34a1.13 1.13 0 11-.66-2.16c4.2-1.28 11.2-1.04 15.57 1.57a1.13 1.13 0 01-1.28 1.93z"
-                      />
-                    </svg>
-                  </span>
-                  Spotify
-                </a>
-
-                <!-- Apple Music -->
-                <a
-                  href="https://music.apple.com/us/artist/in-verso/1802055087"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M16.365 2.01l-7.5 1.5A1.5 1.5 0 007.5 5v11.25a2.25 2.25 0 11-1.5-2.122V6.75l9-1.8v8.4a2.25 2.25 0 11-1.5-2.122V3.51a1.5 1.5 0 00-1.135-1.5z"
-                      />
-                    </svg>
-                  </span>
-                  Apple Music
-                </a>
-
-                <!-- YouTube Music -->
-                <a
-                  href="https://music.youtube.com/playlist?list=OLAK5uy_kYlCcQ8ymZlp7gZWbULbIE9ZDs91KsW9U"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M12 2a10 10 0 100 20 10 10 0 000-20zm-2 6l6 4-6 4V8z"
-                      />
-                    </svg>
-                  </span>
-                  YouTube Music
-                </a>
-
-                <!-- SoundCloud -->
-                <a
-                  href="https://soundcloud.com/grupo_in_verso/in-verso-rapsodia"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M17.5 10.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5H6a4 4 0 010-8c.3 0 .6.03.9.1A5.5 5.5 0 0117.5 10.5z"
-                      />
-                    </svg>
-                  </span>
-                  SoundCloud
-                </a>
-              </div>
-            </article>
-
-            <article class="release-card">
-              <!-- CANCIÓN 2-->
-              <div class="release-card__cover">
-                <img
-                  src="images/ivan-vazquez-eduardo-in-verso.jpg"
-                  alt="Single Rapsosia del disco Corvus Corax de IN VERSO"
-                />
-              </div>
-
-              <h3 class="release-card__title">Rapsodia · 2013</h3>
-              <p class="release-card__meta">Corvus Corax</p>
-
-              <div class="release-card__actions">
-                <!-- Spotify -->
-                <a
-                  href="https://open.spotify.com/intl-es/track/4R0SOxxMm6lFeaJ2IMDm3C"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12s12-5.372 12-12C24 5.373 18.627 0 12 0zm5.485 17.338a.748.748 0 01-1.03.246c-2.82-1.73-6.36-2.12-10.57-1.17a.75.75 0 11-.32-1.46c4.57-1 8.52-.57 11.66 1.36.36.22.48.69.26 1.02zm1.47-3.26a.94.94 0 01-1.29.31c-3.23-1.99-8.15-2.57-11.94-1.42a.94.94 0 11-.54-1.8c4.3-1.29 9.77-.64 13.39 1.61.44.27.58.85.29 1.3zm.13-3.45c-3.76-2.23-10-2.43-13.63-1.34a1.13 1.13 0 11-.66-2.16c4.2-1.28 11.2-1.04 15.57 1.57a1.13 1.13 0 01-1.28 1.93z"
-                      />
-                    </svg>
-                  </span>
-                  Spotify
-                </a>
-
-                <!-- Apple Music -->
-                <a
-                  href="https://music.apple.com/us/song/rapsodia/1802055892"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M16.365 2.01l-7.5 1.5A1.5 1.5 0 007.5 5v11.25a2.25 2.25 0 11-1.5-2.122V6.75l9-1.8v8.4a2.25 2.25 0 11-1.5-2.122V3.51a1.5 1.5 0 00-1.135-1.5z"
-                      />
-                    </svg>
-                  </span>
-                  Apple Music
-                </a>
-
-                <!-- YouTube Music -->
-                <a
-                  href="https://music.youtube.com/watch?v=m11gH1QtBFE"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M12 2a10 10 0 100 20 10 10 0 000-20zm-2 6l6 4-6 4V8z"
-                      />
-                    </svg>
-                  </span>
-                  YouTube Music
-                </a>
-
-                <!-- SoundCloud -->
-                <a
-                  href="https://soundcloud.com/grupo_in_verso/in-verso-rapsodia"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M17.5 10.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5H6a4 4 0 010-8c.3 0 .6.03.9.1A5.5 5.5 0 0117.5 10.5z"
-                      />
-                    </svg>
-                  </span>
-                  SoundCloud
-                </a>
-              </div>
-            </article>
-
-            <article class="release-card">
-              <!-- CANCIÓN 3-->
-              <div class="release-card__cover">
-                <img
-                  src="images/iv_logo8d.png"
-                  alt="Portada del single 8D Acoustic Letter of Dreams de IN VERSO"
-                />
-              </div>
-
-              <h3 class="release-card__title">
-                8D Acoustic Letter of Dreams de IN VERSO
-              </h3>
-              <p class="release-card__meta">Single</p>
-
-              <div class="release-card__actions">
-                <!-- Spotify -->
-                <a
-                  href="https://open.spotify.com/intl-es/track/75C3pSkxLBH7tBHppgAuDI"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12s12-5.372 12-12C24 5.373 18.627 0 12 0zm5.485 17.338a.748.748 0 01-1.03.246c-2.82-1.73-6.36-2.12-10.57-1.17a.75.75 0 11-.32-1.46c4.57-1 8.52-.57 11.66 1.36.36.22.48.69.26 1.02zm1.47-3.26a.94.94 0 01-1.29.31c-3.23-1.99-8.15-2.57-11.94-1.42a.94.94 0 11-.54-1.8c4.3-1.29 9.77-.64 13.39 1.61.44.27.58.85.29 1.3zm.13-3.45c-3.76-2.23-10-2.43-13.63-1.34a1.13 1.13 0 11-.66-2.16c4.2-1.28 11.2-1.04 15.57 1.57a1.13 1.13 0 01-1.28 1.93z"
-                      />
-                    </svg>
-                  </span>
-                  Spotify
-                </a>
-
-                <!-- Apple Music -->
-                <a
-                  href="https://music.apple.com/us/song/carta-de-sue%C3%B1os-acoustic-bonus-track/1802055900"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M16.365 2.01l-7.5 1.5A1.5 1.5 0 007.5 5v11.25a2.25 2.25 0 11-1.5-2.122V6.75l9-1.8v8.4a2.25 2.25 0 11-1.5-2.122V3.51a1.5 1.5 0 00-1.135-1.5z"
-                      />
-                    </svg>
-                  </span>
-                  Apple Music
-                </a>
-
-                <!-- YouTube Music -->
-                <a
-                  href="https://music.youtube.com/watch?v=lQgCdeG4YuA"
-                  class="link"
-                  target="_blank"
-                >
-                  <span class="icon-wrapper">
-                    <svg class="icon" viewBox="0 0 24 24">
-                      <path
-                        d="M12 2a10 10 0 100 20 10 10 0 000-20zm-2 6l6 4-6 4V8z"
-                      />
-                    </svg>
-                  </span>
-                  YouTube Music
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- VÍDEOS -->
-      <section id="media" class="section section--alt">
-        <div class="container section__inner">
-          <header class="section__header">
-            <h2 class="section__title">Vídeos</h2>
-            <p class="section__subtitle">
-              Videoclips oficiales y lyric videos.
-            </p>
-          </header>
-
-          <div class="grid grid--3cols">
-            <!-- Videoclip 1 -->
-            <article class="video-card">
-              <div class="video-card__thumb">
-                <a
-                  href="https://www.youtube.com/watch?v=Hf5fUL0aB7c"
-                  target="_blank"
-                >
-                  <img
-                    src="https://img.youtube.com/vi/Hf5fUL0aB7c/hqdefault.jpg"
-                    alt="Miniatura del videoclip Corvus Corax"
-                    class="video-thumb__image"
-                  />
-                </a>
-              </div>
-              <h3 class="video-card__title">
-                Videoclip oficial Corvus Corax - IN VERSO
-              </h3>
-              <p class="video-card__meta">Lanzamiento principal</p>
-            </article>
-
-            <!-- Videoclip 2 -->
-            <article class="video-card">
-              <div class="video-card__thumb">
-                <a
-                  href="https://www.youtube.com/watch?v=XZCoJOVBIs0"
-                  target="_blank"
-                >
-                  <img
-                    src="https://img.youtube.com/vi/XZCoJOVBIs0/hqdefault.jpg"
-                    alt="Miniatura del videoclip Carta de Sueños"
-                    class="video-thumb__image"
-                  />
-                </a>
-              </div>
-              <h3 class="video-card__title">
-                Videoclip Carta de Sueños - IN VERSO
-              </h3>
-              <p class="video-card__meta">Segundo lanzamiento oficial</p>
-            </article>
-
-            <!-- Videoclip 3 -->
-            <article class="video-card">
-              <div class="video-card__thumb">
-                <a
-                  href="https://www.youtube.com/watch?v=lThHrQ-2cNI"
-                  target="_blank"
-                >
-                  <img
-                    src="https://img.youtube.com/vi/lThHrQ-2cNI/hqdefault.jpg"
-                    alt="Miniatura del videoclip Ciudades que no existen"
-                    class="video-thumb__image"
-                  />
-                </a>
-              </div>
-              <h3 class="video-card__title">
-                Videoclip Ciudades que no existen - IN VERSO
-              </h3>
-              <p class="video-card__meta">Tercer lanzamiento oficial</p>
-            </article>
-          </div>
-
-
-<div class="grid grid--3cols">
-            <!-- Videoclip 4 -->
-            <article class="video-card">
-              <div class="video-card__thumb">
-                <a
-                  href="https://youtu.be/d7vHeMxbZQ4"
-                  target="_blank"
-                >
-                  <img
-                    src="https://img.youtube.com/vi/d7vHeMxbZQ4/hqdefault.jpg"
-                    alt="Miniatura del video In Verso Se abrió camino"
-                    class="video-thumb__image"
-                  />
-                </a>
-              </div>
-              <h3 class="video-card__title">
-                Se abrió camino - IN VERSO
-              </h3>
-              <p class="video-card__meta">Álbum Corvus Corax</p>
-            </article>
-
-            <!-- Videoclip 5 -->
-            <article class="video-card">
-              <div class="video-card__thumb">
-                <a
-                  href="https://youtu.be/s47f_G9g20c"
-                  target="_blank"
-                >
-                  <img
-                    src="https://img.youtube.com/vi/s47f_G9g20c/hqdefault.jpg"
-                    alt="Miniatura del videoclip Rapsodia"
-                    class="video-thumb__image"
-                  />
-                </a>
-              </div>
-              <h3 class="video-card__title">
-                Rapsodia - IN VERSO
-              </h3>
-              <p class="video-card__meta">Álbum Corvus Corax</p>
-            </article>
-
-            <!-- Videoclip 6 -->
-            <article class="video-card">
-              <div class="video-card__thumb">
-                <a
-                  href="https://youtu.be/LtADXBo4yps"
-                  target="_blank"
-                >
-                  <img
-                    src="https://img.youtube.com/vi/LtADXBo4yps/hqdefault.jpg"
-                    alt="Miniatura del video IN VERSO | MAKING OF EP – CORVUS CORAX"
-                    class="video-thumb__image"
-                  />
-                </a>
-              </div>
-              <h3 class="video-card__title">
-                IN VERSO | MAKING OF EP – CORVUS CORAX
-              </h3>
-              <p class="video-card__meta">Studio PKO Madrid</p>
-            </article>
-          </div>
-
-
-
-        </div>
-
-<br>
-<div class="container section__inner">
-          <header class="section__header">
-            <h2 class="section__title">Directos</h2>
-            <p class="section__subtitle">
-              Sesiones en directo.
-            </p>
-          </header>
-
-          <div class="grid grid--3cols">
-            <!-- Directo 1 -->
-            <article class="video-card">
-              <div class="video-card__thumb">
-                <a
-                  href="https://youtu.be/bD2fxv6Fbyg"
-                  target="_blank"
-                >
-                  <img
-                    src="https://img.youtube.com/vi/bD2fxv6Fbyg/hqdefault.jpg"
-                    alt="Miniatura del videoclip Corvus Corax"
-                    class="video-thumb__image"
-                  />
-                </a>
-              </div>
-              <h3 class="video-card__title">
-                IN VERSO | BLACK WATER´S – LIVE IN MADRID
-              </h3>
-              <p class="video-card__meta">Sala Barracuda - Madrid</p>
-            </article>
-
-            <!-- Directo 2 -->
-            <article class="video-card">
-              <div class="video-card__thumb">
-                <a
-                  href="https://youtu.be/FqiDmPvHDBk"
-                  target="_blank"
-                >
-                  <img
-                    src="https://img.youtube.com/vi/FqiDmPvHDBk/hqdefault.jpg"
-                    alt="MiniaturaIN VERSO | DELIBERAR – LIVE IN MADRID"
-                    class="video-thumb__image"
-                  />
-                </a>
-              </div>
-              <h3 class="video-card__title">
-                IN VERSO | DELIBERAR – LIVE IN MADRID
-              </h3>
-              <p class="video-card__meta">Sala Wurlitzer - Madrid</p>
-            </article>
-
-            <!-- Videoclip 3 -->
-            <article class="video-card">
-              <div class="video-card__thumb">
-                <a
-                  href="https://youtu.be/hR7BsNbzYKU"
-                  target="_blank"
-                >
-                  <img
-                    src="https://img.youtube.com/vi/hR7BsNbzYKU/hqdefault.jpg"
-                    alt="Miniatura IN VERSO | MESSAGE – LIVE IN MADRID"
-                    class="video-thumb__image"
-                  />
-                </a>
-              </div>
-              <h3 class="video-card__title">
-                IN VERSO | MESSAGE – LIVE IN MADRID
-              </h3>
-              <p class="video-card__meta">Sala HEBE- Madrid</p>
-            </article>
-          </div>
-        </div>
-
-      </section>
-
-      <BR></BR>
-
-     <!-- PRENSA -->
-<section id="prensa" class="section">
-  <div class="container section__inner">
-
-    <header class="section__header">
-      <h2 class="section__title">Prensa</h2>
-      <p class="section__subtitle">
-        Artículos, reseñas y menciones en medios digitales.
-      </p>
-    </header>
-
-    <div class="press-list">
-
-      <article class="press-item">
-        <h3 class="press-item__title">NECROMANCE Digital Magazine</h3>
-        <p class="press-item__text">
-          Entrevista a In Verso sobre su trayectoria, proceso creativo y visión musical.
-        </p>
-        <a href="https://necromance.eu/in-verso-esp-entrevista/" target="_blank" class="link">
-          Leer artículo
-        </a>
-      </article>
-
-      <article class="press-item">
-        <h3 class="press-item__title">NECROMANCE Records</h3>
-        <p class="press-item__text">
-          Reseña del EP <em>Corvus Corax</em> (2013) y análisis de su sonido.
-        </p>
-        <a href="https://necromance.eu/in-verso-esp-corvus-corax-cd-ep-2013-autofinanciado/" target="_blank" class="link">
-          Leer artículo
-        </a>
-      </article>
-
-      <article class="press-item">
-        <h3 class="press-item__title">Spirit Of Metal</h3>
-        <p class="press-item__text">
-          Ficha oficial de la banda en uno de los mayores portales de metal del mundo.
-        </p>
-        <a href="https://www.spirit-of-metal.com/es/band/In_Verso" target="_blank" class="link">
-          Ver ficha
-        </a>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-
-      <!-- CONTACTO -->
-      <section id="contact" class="section section--alt">
-        <div class="container section__inner">
-          <header class="section__header">
-            <h2 class="section__title">Contacto</h2>
-            <p class="section__subtitle">
-              Prensa, colaboraciones o cualquier consulta relacionada con IN
-              VERSO.
-            </p>
-          </header>
-
-          <div class="grid grid--2cols">
-            <form id="contact-form" class="form">
-              <div class="form__group">
-                <label for="name" class="form__label">Nombre</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="from_name"
-                  class="form__input"
-                  placeholder="Tu nombre"
-                  required
-                />
-              </div>
-
-              <div class="form__group">
-                <label for="email" class="form__label">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="from_email"
-                  class="form__input"
-                  placeholder="tu@email.com"
-                  required
-                />
-              </div>
-
-              <div class="form__group">
-                <label for="reason" class="form__label">Motivo</label>
-                <select id="reason" name="reason" class="form__input">
-                  <option value="">Selecciona una opción</option>
-                  <option value="Prensa / Media">Prensa / Media</option>
-                  <option value="Colaboraciones">Colaboraciones</option>
-                  <option value="Otros">Otros</option>
-                </select>
-              </div>
-
-              <div class="form__group">
-                <label for="message" class="form__label">Mensaje</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  class="form__input form__input--textarea"
-                  rows="4"
-                  placeholder="Escribe tu mensaje aquí"
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn btn--primary">Enviar</button>
-              <p id="form-message" class="form-message"></p>
-            </form>
-
-            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-            <script>
-              (function () {
-                emailjs.init("6mnP28f-fw1y2cI3M");
-              })();
-
-              document.addEventListener("DOMContentLoaded", function () {
-                const form = document.getElementById("contact-form");
-                const msg = document.getElementById("form-message");
-
-                form.addEventListener("submit", function (e) {
-                  e.preventDefault();
-
-                  const submitBtn = form.querySelector('button[type="submit"]');
-                  submitBtn.disabled = true;
-                  submitBtn.textContent = "Enviando...";
-                  msg.textContent = ""; // limpiar mensaje previo
-
-                  emailjs
-                    .sendForm("service_1yyeych", "template_wa8llkc", form)
-                    .then(() => {
-                      msg.textContent =
-                        "Mensaje enviado correctamente. ¡Gracias!";
-                      msg.style.color = "green";
-
-                      form.reset();
-                      submitBtn.disabled = false;
-                      submitBtn.textContent = "Enviar";
-                    })
-                    .catch((error) => {
-                      console.error("Error:", error);
-                      msg.textContent =
-                        "Ha ocurrido un error al enviar el mensaje. Inténtalo de nuevo.";
-                      msg.style.color = "red";
-
-                      submitBtn.disabled = false;
-                      submitBtn.textContent = "Enviar";
-                    });
-                });
-              });
-            </script>
-
-            <div class="contact-info">
-              <h3 class="contact-info__title">Management &amp; prensa</h3>
-
-              <p class="contact-info__item">
-                <strong>Email:</strong>
-                <a href="mailto:contacto@inversoband.com" class="link"
-                  >contacto@inversoband.com</a
-                >
-              </p>
-
-              <p class="contact-info__item"><strong>Redes:</strong></p>
-
-              <ul class="contact-info__social">
-                <!-- Instagram -->
-                <li>
-                  <a
-                    href="https://www.instagram.com/inversodeathmetalband/"
-                    class="link"
-                    target="_blank"
-                  >
-                    <span class="icon-wrapper">
-                      <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                          d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"
-                        />
-                      </svg>
-                    </span>
-                    Instagram
-                  </a>
-                </li>
-
-                <!-- Facebook -->
-                <li>
-                  <a
-                    href="https://www.facebook.com/INVERSOBAND/"
-                    class="link"
-                    target="_blank"
-                  >
-                    <span class="icon-wrapper">
-                      <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                          d="M13 3h4V0h-4a5 5 0 00-5 5v3H5v4h3v12h4V12h3.5l.5-4H12V5a1 1 0 011-1z"
-                        />
-                      </svg>
-                    </span>
-                    Facebook
-                  </a>
-                </li>
-
-                <!-- Spotify -->
-                <li>
-                  <a
-                    href="https://open.spotify.com/intl-es/album/3hwivkhpVZwyK7UWO0zmHZ"
-                    class="link"
-                    target="_blank"
-                  >
-                    <span class="icon-wrapper">
-                      <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                          d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.52 17.35a.75.75 0 01-1.03.25c-2.82-1.73-6.37-2.12-10.57-1.17a.75.75 0 11-.32-1.46c4.57-1.01 8.52-.57 11.66 1.36.36.22.48.69.26 1.02zm1.47-3.26a.94.94 0 01-1.29.31c-3.23-1.99-8.15-2.57-11.94-1.42a.94.94 0 11-.54-1.8c4.3-1.29 9.77-.64 13.39 1.61.44.27.58.85.29 1.3zm.13-3.45c-3.76-2.23-10-2.43-13.63-1.34a1.13 1.13 0 11-.66-2.16c4.2-1.28 11.2-1.04 15.57 1.57a1.13 1.13 0 01-1.28 1.93z"
-                        />
-                      </svg>
-                    </span>
-                    Spotify
-                  </a>
-                </li>
-
-                <!-- Apple Music -->
-                <li>
-                  <a
-                    href="https://music.apple.com/us/artist/in-verso/1802055087"
-                    class="link"
-                    target="_blank"
-                  >
-                    <span class="icon-wrapper">
-                      <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                          d="M16.365 2.01l-7.5 1.5A1.5 1.5 0 007.5 5v11.25a2.25 2.25 0 11-1.5-2.122V6.75l9-1.8v8.4a2.25 2.25 0 11-1.5-2.122V3.51a1.5 1.5 0 00-1.135-1.5z"
-                        />
-                      </svg>
-                    </span>
-                    Apple Music
-                  </a>
-                </li>
-
-                <!-- YouTube Music -->
-                <li>
-                  <a
-                    href="https://music.youtube.com/playlist?list=OLAK5uy_kYlCcQ8ymZlp7gZWbULbIE9ZDs91KsW9U"
-                    class="link"
-                    target="_blank"
-                  >
-                    <span class="icon-wrapper">
-                      <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                          d="M12 2a10 10 0 100 20 10 10 0 000-20zm-2 6l6 4-6 4V8z"
-                        />
-                      </svg>
-                    </span>
-                    YouTube Music
-                  </a>
-                </li>
-
-                <!-- SoundCloud -->
-                <li>
-                  <a
-                    href="https://soundcloud.com/grupo_in_verso/in-verso-rapsodia"
-                    class="link"
-                    target="_blank"
-                  >
-                    <span class="icon-wrapper">
-                      <svg class="icon" viewBox="0 0 24 24">
-                        <path
-                          d="M17.5 10.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5H6a4 4 0 010-8c.3 0 .6.03.9.1A5.5 5.5 0 0117.5 10.5z"
-                        />
-                      </svg>
-                    </span>
-                    SoundCloud
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="container site-footer__inner">
-        <a href="#top" class="site-footer__brand site-footer__brand--link">
-          <span class="site-footer__logo">IN VERSO</span>
-          <span class="site-footer__meta">Melodic Death Metal</span>
-        </a>
-
-        <div class="site-footer__links">
-          <a href="#top" class="link">Inicio</a>
-          <a href="privacidad.html" class="link">Política de privacidad</a>
-          <a href="sobre-in-verso.html" class="link">Sobre IN VERSO</a>
-        </div>
-
-        <div class="site-footer__copy">
-          © <span id="year"></span> IN VERSO. Todos los derechos reservados.
-          <br />
-          <small class="site-footer__credits">
-            Web creada por
-            <a href="https://draftdesignweb.com" class="link" target="_blank">
-              DRAFT Design Web
-            </a>
-          </small>
-        </div>
-        <!-- BOTÓN SUBIR ARRIBA --> <a href="#top" class="back-to-top" aria-label="Subir arriba"> ↑ </a>
       </div>
-    </footer>
+    </section>
 
-    <!-- SCRIPT -->
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+    <!-- BANDA -->
+    <section id="band" class="section section--alt">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2 class="section__title">La banda</h2>
+        </header>
 
-      const navToggle = document.querySelector(".main-nav__toggle");
-      const navList = document.querySelector(".main-nav__list");
+        <div class="section__intro">
+          <p>
+            In Verso surgió como una de las propuestas más singulares del
+            death metal melódico español a comienzos de la década de 2010.
+            Fundada en Madrid por Iván Vázquez (guitarra y composición) y
+            Eduardo Guilló (voz y bajo), la banda desarrolló un sonido propio
+            que combinaba la agresividad del death metal tradicional con
+            atmósferas introspectivas y un marcado enfoque progresivo.
+          </p>
 
-      if (navToggle && navList) {
-        navToggle.addEventListener("click", () => {
-          const expanded = navToggle.getAttribute("aria-expanded") === "true";
-          navToggle.setAttribute("aria-expanded", String(!expanded));
-          navList.classList.toggle("main-nav__list--open");
-        });
-      }
-    </script>
+          <p>
+            Su único álbum de estudio, <em>Corvus Corax</em> (2013), se
+            convirtió en una referencia dentro de la escena nacional gracias a
+            su ambición compositiva y su cuidada producción. Aunque la
+            actividad del proyecto cesó oficialmente en 2016, su legado
+            permanece como un ejemplo de creatividad, técnica y sensibilidad
+            dentro del metal extremo contemporáneo.
+          </p>
 
-    <!--barra de progreso-->
-    <script>
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const progress = (scrollTop / docHeight) * 100;
-    document.getElementById("progress-bar").style.width = progress + "%";
-  });
-</script>
+          <p>
+            In Verso representa una generación de músicos técnicamente
+            virtuosos. <em>Corvus Corax</em> permanece como testimonio de una
+            era donde el death metal comenzaba a hibridarse con géneros más
+            experimentales, sentando bases para el actual auge del post-metal
+            ibérico.
+          </p>
 
-  </body>
+          <p>
+            La banda demostró que era posible articular narrativas complejas
+            en castellano dentro del marco del metal extremo, influyendo en
+            formaciones posteriores como Teitanfist y Dawn of Twilight. Su
+            énfasis en la producción de calidad y el lirismo elevado
+            estableció nuevos estándares para el género a nivel nacional,
+            aunque su impacto internacional quedó limitado por factores
+            geográficos y temporales. <em>Corvus Corax</em> sigue ofreciendo
+            nuevas capas de significado con cada escucha, confirmando a In
+            Verso como uno de los proyectos más importantes del metal español
+            contemporáneo.
+          </p>
+        </div>
+
+        <div class="grid grid--2cols">
+          <article id="biografia" class="card">
+            <h3 class="card__title">Biografía</h3>
+            <p class="card__text">
+              In Verso fue una banda de death metal melódico originaria de
+              Madrid, activa entre 2010 y 2016. Fundada por Iván Vázquez
+              (guitarrista y compositor) y Eduardo Guilló (vocalista y
+              bajista), el proyecto destacó por su energía, su enfoque
+              melódico y su capacidad para combinar agresividad y sensibilidad
+              dentro del género.
+              <br /><br />
+              En sus grabaciones de estudio, la batería fue interpretada por
+              Alfred Berengena (baterista de S.A.), mientras que en directo
+              contaron con músicos invitados tanto en la guitarra rítmica como
+              en la batería, aportando un alto nivel técnico y una puesta en
+              escena sólida.
+              <br /><br />
+              Aunque la banda cesó su actividad en 2016, sus integrantes
+              mantienen contacto y dejan como legado su álbum
+              <em>Corvux Corax</em>, grabado en PKO Studio de Madrid bajo la
+              producción de Emilio Mercader. Este trabajo resume la esencia y
+              el compromiso musical que definieron a In Verso durante toda su
+              trayectoria.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Miembros</h3>
+            <ul class="card__list">
+              <li>
+                <strong>Iván Vázquez</strong> — Guitarrista / Compositor
+                <br />
+                <span class="card__text">
+                  Principal responsable de la composición y la dirección musical. Su estilo combina riffs agresivos con
+                  pasajes melódicos y estructuras progresivas.
+                </span>
+                <br />
+                <a href="ivan_vazquez.html" class="btn-member">Saber más</a>
+              </li>
+              <br />
+
+              <li>
+                <strong>Eduardo Guilló</strong> — Bajo / Voz
+                <br />
+                <span class="card__text">
+                  Vocalista y bajista con un registro versátil, capaz de alternar entre guturales profundos y líneas
+                  melódicas. Su presencia escénica definió la identidad del grupo.
+                </span>
+                <br />
+                <a href="edu.html" class="btn-member">Saber más</a>
+              </li>
+              <br />
+
+              <li>
+                <strong>Batería</strong> — Alfred Berengena / Diego Morales
+                <br />
+                <span class="card__text">
+                  Alfred grabó la batería en estudio aportando precisión y contundencia. En directo, Diego Morales y
+                  otros músicos invitados reforzaron el sonido con técnica y dinamismo.
+                </span>
+                <br />
+                <a href="bateria.html" class="btn-member">Saber más</a>
+              </li>
+
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÚSICA -->
+    <section id="music" class="section">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2 class="section__title">Música</h2>
+          <p class="section__subtitle">
+            Escucha IN VERSO en tu plataforma favorita.
+          </p>
+        </header>
+
+        <div class="grid grid--3cols">
+          <article class="release-card">
+            <!-- CANCIÓN 1-->
+            <div class="release-card__cover">
+              <img src="images/portada-corvus-corax- in-verso.jpg" alt="Portada del disco Corvus Corax de IN VERSO" />
+            </div>
+
+            <h3 class="release-card__title">Corvus Corax · 2013</h3>
+            <p class="release-card__meta">Preview Álbum EP</p>
+
+            <div class="release-card__actions">
+              <!-- Spotify -->
+              <a href="https://open.spotify.com/intl-es/album/3hwivkhpVZwyK7UWO0zmHZ" class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12s12-5.372 12-12C24 5.373 18.627 0 12 0zm5.485 17.338a.748.748 0 01-1.03.246c-2.82-1.73-6.36-2.12-10.57-1.17a.75.75 0 11-.32-1.46c4.57-1 8.52-.57 11.66 1.36.36.22.48.69.26 1.02zm1.47-3.26a.94.94 0 01-1.29.31c-3.23-1.99-8.15-2.57-11.94-1.42a.94.94 0 11-.54-1.8c4.3-1.29 9.77-.64 13.39 1.61.44.27.58.85.29 1.3zm.13-3.45c-3.76-2.23-10-2.43-13.63-1.34a1.13 1.13 0 11-.66-2.16c4.2-1.28 11.2-1.04 15.57 1.57a1.13 1.13 0 01-1.28 1.93z" />
+                  </svg>
+                </span>
+                Spotify
+              </a>
+
+              <!-- Apple Music -->
+              <a href="https://music.apple.com/us/artist/in-verso/1802055087" class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      d="M16.365 2.01l-7.5 1.5A1.5 1.5 0 007.5 5v11.25a2.25 2.25 0 11-1.5-2.122V6.75l9-1.8v8.4a2.25 2.25 0 11-1.5-2.122V3.51a1.5 1.5 0 00-1.135-1.5z" />
+                  </svg>
+                </span>
+                Apple Music
+              </a>
+
+              <!-- YouTube Music -->
+              <a href="https://music.youtube.com/playlist?list=OLAK5uy_kYlCcQ8ymZlp7gZWbULbIE9ZDs91KsW9U" class="link"
+                target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-2 6l6 4-6 4V8z" />
+                  </svg>
+                </span>
+                YouTube Music
+              </a>
+
+              <!-- SoundCloud -->
+              <a href="https://soundcloud.com/grupo_in_verso/in-verso-rapsodia" class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      d="M17.5 10.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5H6a4 4 0 010-8c.3 0 .6.03.9.1A5.5 5.5 0 0117.5 10.5z" />
+                  </svg>
+                </span>
+                SoundCloud
+              </a>
+            </div>
+          </article>
+
+          <article class="release-card">
+            <!-- CANCIÓN 2-->
+            <div class="release-card__cover">
+              <img src="images/ivan-vazquez-eduardo-in-verso.jpg"
+                alt="Single Rapsosia del disco Corvus Corax de IN VERSO" />
+            </div>
+
+            <h3 class="release-card__title">Rapsodia · 2013</h3>
+            <p class="release-card__meta">Corvus Corax</p>
+
+            <div class="release-card__actions">
+              <!-- Spotify -->
+              <a href="https://open.spotify.com/intl-es/track/4R0SOxxMm6lFeaJ2IMDm3C" class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12s12-5.372 12-12C24 5.373 18.627 0 12 0zm5.485 17.338a.748.748 0 01-1.03.246c-2.82-1.73-6.36-2.12-10.57-1.17a.75.75 0 11-.32-1.46c4.57-1 8.52-.57 11.66 1.36.36.22.48.69.26 1.02zm1.47-3.26a.94.94 0 01-1.29.31c-3.23-1.99-8.15-2.57-11.94-1.42a.94.94 0 11-.54-1.8c4.3-1.29 9.77-.64 13.39 1.61.44.27.58.85.29 1.3zm.13-3.45c-3.76-2.23-10-2.43-13.63-1.34a1.13 1.13 0 11-.66-2.16c4.2-1.28 11.2-1.04 15.57 1.57a1.13 1.13 0 01-1.28 1.93z" />
+                  </svg>
+                </span>
+                Spotify
+              </a>
+
+              <!-- Apple Music -->
+              <a href="https://music.apple.com/us/song/rapsodia/1802055892" class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      d="M16.365 2.01l-7.5 1.5A1.5 1.5 0 007.5 5v11.25a2.25 2.25 0 11-1.5-2.122V6.75l9-1.8v8.4a2.25 2.25 0 11-1.5-2.122V3.51a1.5 1.5 0 00-1.135-1.5z" />
+                  </svg>
+                </span>
+                Apple Music
+              </a>
+
+              <!-- YouTube Music -->
+              <a href="https://music.youtube.com/watch?v=m11gH1QtBFE" class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-2 6l6 4-6 4V8z" />
+                  </svg>
+                </span>
+                YouTube Music
+              </a>
+
+              <!-- SoundCloud -->
+              <a href="https://soundcloud.com/grupo_in_verso/in-verso-rapsodia" class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      d="M17.5 10.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5H6a4 4 0 010-8c.3 0 .6.03.9.1A5.5 5.5 0 0117.5 10.5z" />
+                  </svg>
+                </span>
+                SoundCloud
+              </a>
+            </div>
+          </article>
+
+          <article class="release-card">
+            <!-- CANCIÓN 3-->
+            <div class="release-card__cover">
+              <img src="images/iv_logo8d.png" alt="Portada del single 8D Acoustic Letter of Dreams de IN VERSO" />
+            </div>
+
+            <h3 class="release-card__title">
+              8D Acoustic Letter of Dreams de IN VERSO
+            </h3>
+            <p class="release-card__meta">Single</p>
+
+            <div class="release-card__actions">
+              <!-- Spotify -->
+              <a href="https://open.spotify.com/intl-es/track/75C3pSkxLBH7tBHppgAuDI" class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12s12-5.372 12-12C24 5.373 18.627 0 12 0zm5.485 17.338a.748.748 0 01-1.03.246c-2.82-1.73-6.36-2.12-10.57-1.17a.75.75 0 11-.32-1.46c4.57-1 8.52-.57 11.66 1.36.36.22.48.69.26 1.02zm1.47-3.26a.94.94 0 01-1.29.31c-3.23-1.99-8.15-2.57-11.94-1.42a.94.94 0 11-.54-1.8c4.3-1.29 9.77-.64 13.39 1.61.44.27.58.85.29 1.3zm.13-3.45c-3.76-2.23-10-2.43-13.63-1.34a1.13 1.13 0 11-.66-2.16c4.2-1.28 11.2-1.04 15.57 1.57a1.13 1.13 0 01-1.28 1.93z" />
+                  </svg>
+                </span>
+                Spotify
+              </a>
+
+              <!-- Apple Music -->
+              <a href="https://music.apple.com/us/song/carta-de-sue%C3%B1os-acoustic-bonus-track/1802055900"
+                class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path
+                      d="M16.365 2.01l-7.5 1.5A1.5 1.5 0 007.5 5v11.25a2.25 2.25 0 11-1.5-2.122V6.75l9-1.8v8.4a2.25 2.25 0 11-1.5-2.122V3.51a1.5 1.5 0 00-1.135-1.5z" />
+                  </svg>
+                </span>
+                Apple Music
+              </a>
+
+              <!-- YouTube Music -->
+              <a href="https://music.youtube.com/watch?v=lQgCdeG4YuA" class="link" target="_blank">
+                <span class="icon-wrapper">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-2 6l6 4-6 4V8z" />
+                  </svg>
+                </span>
+                YouTube Music
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VÍDEOS -->
+    <section id="media" class="section section--alt">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2 class="section__title">Vídeos</h2>
+          <p class="section__subtitle">
+            Videoclips oficiales y lyric videos.
+          </p>
+        </header>
+
+        <div class="grid grid--3cols">
+          <!-- Videoclip 1 -->
+          <article class="video-card">
+            <div class="video-card__thumb">
+              <a href="https://www.youtube.com/watch?v=Hf5fUL0aB7c" target="_blank">
+                <img src="https://img.youtube.com/vi/Hf5fUL0aB7c/hqdefault.jpg"
+                  alt="Miniatura del videoclip Corvus Corax" class="video-thumb__image" />
+              </a>
+            </div>
+            <h3 class="video-card__title">
+              Videoclip oficial Corvus Corax - IN VERSO
+            </h3>
+            <p class="video-card__meta">Lanzamiento principal</p>
+          </article>
+
+          <!-- Videoclip 2 -->
+          <article class="video-card">
+            <div class="video-card__thumb">
+              <a href="https://www.youtube.com/watch?v=XZCoJOVBIs0" target="_blank">
+                <img src="https://img.youtube.com/vi/XZCoJOVBIs0/hqdefault.jpg"
+                  alt="Miniatura del videoclip Carta de Sueños" class="video-thumb__image" />
+              </a>
+            </div>
+            <h3 class="video-card__title">
+              Videoclip Carta de Sueños - IN VERSO
+            </h3>
+            <p class="video-card__meta">Segundo lanzamiento oficial</p>
+          </article>
+
+          <!-- Videoclip 3 -->
+          <article class="video-card">
+            <div class="video-card__thumb">
+              <a href="https://www.youtube.com/watch?v=lThHrQ-2cNI" target="_blank">
+                <img src="https://img.youtube.com/vi/lThHrQ-2cNI/hqdefault.jpg"
+                  alt="Miniatura del videoclip Ciudades que no existen" class="video-thumb__image" />
+              </a>
+            </div>
+            <h3 class="video-card__title">
+              Videoclip Ciudades que no existen - IN VERSO
+            </h3>
+            <p class="video-card__meta">Tercer lanzamiento oficial</p>
+          </article>
+        </div>
+
+
+        <div class="grid grid--3cols">
+          <!-- Videoclip 4 -->
+          <article class="video-card">
+            <div class="video-card__thumb">
+              <a href="https://youtu.be/d7vHeMxbZQ4" target="_blank">
+                <img src="https://img.youtube.com/vi/d7vHeMxbZQ4/hqdefault.jpg"
+                  alt="Miniatura del video In Verso Se abrió camino" class="video-thumb__image" />
+              </a>
+            </div>
+            <h3 class="video-card__title">
+              Se abrió camino - IN VERSO
+            </h3>
+            <p class="video-card__meta">Álbum Corvus Corax</p>
+          </article>
+
+          <!-- Videoclip 5 -->
+          <article class="video-card">
+            <div class="video-card__thumb">
+              <a href="https://youtu.be/s47f_G9g20c" target="_blank">
+                <img src="https://img.youtube.com/vi/s47f_G9g20c/hqdefault.jpg" alt="Miniatura del videoclip Rapsodia"
+                  class="video-thumb__image" />
+              </a>
+            </div>
+            <h3 class="video-card__title">
+              Rapsodia - IN VERSO
+            </h3>
+            <p class="video-card__meta">Álbum Corvus Corax</p>
+          </article>
+
+          <!-- Videoclip 6 -->
+          <article class="video-card">
+            <div class="video-card__thumb">
+              <a href="https://youtu.be/LtADXBo4yps" target="_blank">
+                <img src="https://img.youtube.com/vi/LtADXBo4yps/hqdefault.jpg"
+                  alt="Miniatura del video IN VERSO | MAKING OF EP – CORVUS CORAX" class="video-thumb__image" />
+              </a>
+            </div>
+            <h3 class="video-card__title">
+              IN VERSO | MAKING OF EP – CORVUS CORAX
+            </h3>
+            <p class="video-card__meta">Studio PKO Madrid</p>
+          </article>
+        </div>
+
+
+
+      </div>
+
+      <br>
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2 class="section__title">Directos</h2>
+          <p class="section__subtitle">
+            Sesiones en directo.
+          </p>
+        </header>
+
+        <div class="grid grid--3cols">
+          <!-- Directo 1 -->
+          <article class="video-card">
+            <div class="video-card__thumb">
+              <a href="https://youtu.be/bD2fxv6Fbyg" target="_blank">
+                <img src="https://img.youtube.com/vi/bD2fxv6Fbyg/hqdefault.jpg"
+                  alt="Miniatura del videoclip Corvus Corax" class="video-thumb__image" />
+              </a>
+            </div>
+            <h3 class="video-card__title">
+              IN VERSO | BLACK WATER´S – LIVE IN MADRID
+            </h3>
+            <p class="video-card__meta">Sala Barracuda - Madrid</p>
+          </article>
+
+          <!-- Directo 2 -->
+          <article class="video-card">
+            <div class="video-card__thumb">
+              <a href="https://youtu.be/FqiDmPvHDBk" target="_blank">
+                <img src="https://img.youtube.com/vi/FqiDmPvHDBk/hqdefault.jpg"
+                  alt="MiniaturaIN VERSO | DELIBERAR – LIVE IN MADRID" class="video-thumb__image" />
+              </a>
+            </div>
+            <h3 class="video-card__title">
+              IN VERSO | DELIBERAR – LIVE IN MADRID
+            </h3>
+            <p class="video-card__meta">Sala Wurlitzer - Madrid</p>
+          </article>
+
+          <!-- Videoclip 3 -->
+          <article class="video-card">
+            <div class="video-card__thumb">
+              <a href="https://youtu.be/hR7BsNbzYKU" target="_blank">
+                <img src="https://img.youtube.com/vi/hR7BsNbzYKU/hqdefault.jpg"
+                  alt="Miniatura IN VERSO | MESSAGE – LIVE IN MADRID" class="video-thumb__image" />
+              </a>
+            </div>
+            <h3 class="video-card__title">
+              IN VERSO | MESSAGE – LIVE IN MADRID
+            </h3>
+            <p class="video-card__meta">Sala HEBE- Madrid</p>
+          </article>
+        </div>
+      </div>
+
+    </section>
+
+    <BR></BR>
+
+    <!-- PRENSA -->
+    <section id="prensa" class="section">
+      <div class="container section__inner">
+
+        <header class="section__header">
+          <h2 class="section__title">Prensa</h2>
+          <p class="section__subtitle">
+            Artículos, reseñas y menciones en medios digitales.
+          </p>
+        </header>
+
+        <div class="press-list">
+
+          <article class="press-item">
+            <h3 class="press-item__title">NECROMANCE Digital Magazine</h3>
+            <p class="press-item__text">
+              Entrevista a In Verso sobre su trayectoria, proceso creativo y visión musical.
+            </p>
+            <a href="https://necromance.eu/in-verso-esp-entrevista/" target="_blank" class="link">
+              Leer artículo
+            </a>
+          </article>
+
+          <article class="press-item">
+            <h3 class="press-item__title">NECROMANCE Records</h3>
+            <p class="press-item__text">
+              Reseña del EP <em>Corvus Corax</em> (2013) y análisis de su sonido.
+            </p>
+            <a href="https://necromance.eu/in-verso-esp-corvus-corax-cd-ep-2013-autofinanciado/" target="_blank"
+              class="link">
+              Leer artículo
+            </a>
+          </article>
+
+          <article class="press-item">
+            <h3 class="press-item__title">Spirit Of Metal</h3>
+            <p class="press-item__text">
+              Ficha oficial de la banda en uno de los mayores portales de metal del mundo.
+            </p>
+            <a href="https://www.spirit-of-metal.com/es/band/In_Verso" target="_blank" class="link">
+              Ver ficha
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section id="contact" class="section section--alt">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2 class="section__title">Contacto</h2>
+          <p class="section__subtitle">
+            Prensa, colaboraciones o cualquier consulta relacionada con IN VERSO.
+          </p>
+        </header>
+
+        <div class="grid grid--2cols">
+          <form id="contact-form" class="form" method="POST">
+            <div class="form__group">
+              <label for="name" class="form__label">Nombre</label>
+              <input type="text" id="name" name="from_name" class="form__input" placeholder="Tu nombre" required />
+            </div>
+
+            <div class="form__group">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" name="from_email" class="form__input" placeholder="tu@email.com"
+                required />
+            </div>
+
+            <div class="form__group">
+              <label for="reason" class="form__label">Motivo</label>
+              <select id="reason" name="reason" class="form__input">
+                <option value="">Selecciona una opción</option>
+                <option value="Prensa / Media">Prensa / Media</option>
+                <option value="Colaboraciones">Colaboraciones</option>
+                <option value="Otros">Otros</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="message" class="form__label">Mensaje</label>
+              <textarea id="message" name="message" class="form__input form__input--textarea" rows="4"
+                placeholder="Escribe tu mensaje aquí"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Enviar</button>
+            <p id="form-message" class="form-message"></p>
+          </form>
+
+          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+          <script>
+            (function () {
+              emailjs.init("6mnP28f-fw1y2cI3M");
+            })();
+
+            document.addEventListener("DOMContentLoaded", function () {
+              const form = document.getElementById("contact-form");
+              const msg = document.getElementById("form-message");
+
+              form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Enviando...";
+                msg.textContent = "";
+
+                emailjs
+                  .sendForm("service_1yyeych", "template_wa8llkc", form)
+                  .then(() => {
+                    msg.textContent = "Mensaje enviado correctamente. ¡Gracias!";
+                    msg.style.color = "green";
+
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Enviar";
+                  })
+                  .catch((error) => {
+                    console.error("Error:", error);
+                    msg.textContent =
+                      "Ha ocurrido un error al enviar el mensaje. Inténtalo de nuevo.";
+                    msg.style.color = "red";
+
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Enviar";
+                  });
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <div class="contact-info">
+      <h3 class="contact-info__title">Management &amp; prensa</h3>
+
+      <p class="contact-info__item">
+        <strong>Email:</strong>
+        <a href="mailto:contacto@inversoband.com" class="link">contacto@inversoband.com</a>
+      </p>
+
+      <p class="contact-info__item"><strong>Redes:</strong></p>
+
+      <ul class="contact-info__social">
+        <!-- Instagram -->
+        <li>
+          <a href="https://www.instagram.com/inversodeathmetalband/" class="link" target="_blank">
+            <span class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z" />
+              </svg>
+            </span>
+            Instagram
+          </a>
+        </li>
+
+        <!-- Facebook -->
+        <li>
+          <a href="https://www.facebook.com/INVERSOBAND/" class="link" target="_blank">
+            <span class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M13 3h4V0h-4a5 5 0 00-5 5v3H5v4h3v12h4V12h3.5l.5-4H12V5a1 1 0 011-1z" />
+              </svg>
+            </span>
+            Facebook
+          </a>
+        </li>
+
+        <!-- Spotify -->
+        <li>
+          <a href="https://open.spotify.com/intl-es/album/3hwivkhpVZwyK7UWO0zmHZ" class="link" target="_blank">
+            <span class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.52 17.35a.75.75 0 01-1.03.25c-2.82-1.73-6.37-2.12-10.57-1.17a.75.75 0 11-.32-1.46c4.57-1.01 8.52-.57 11.66 1.36.36.22.48.69.26 1.02zm1.47-3.26a.94.94 0 01-1.29.31c-3.23-1.99-8.15-2.57-11.94-1.42a.94.94 0 11-.54-1.8c4.3-1.29 9.77-.64 13.39 1.61.44.27.58.85.29 1.3zm.13-3.45c-3.76-2.23-10-2.43-13.63-1.34a1.13 1.13 0 11-.66-2.16c4.2-1.28 11.2-1.04 15.57 1.57a1.13 1.13 0 01-1.28 1.93z" />
+              </svg>
+            </span>
+            Spotify
+          </a>
+        </li>
+
+        <!-- Apple Music -->
+        <li>
+          <a href="https://music.apple.com/us/artist/in-verso/1802055087" class="link" target="_blank">
+            <span class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  d="M16.365 2.01l-7.5 1.5A1.5 1.5 0 007.5 5v11.25a2.25 2.25 0 11-1.5-2.122V6.75l9-1.8v8.4a2.25 2.25 0 11-1.5-2.122V3.51a1.5 1.5 0 00-1.135-1.5z" />
+              </svg>
+            </span>
+            Apple Music
+          </a>
+        </li>
+
+        <!-- YouTube Music -->
+        <li>
+          <a href="https://music.youtube.com/playlist?list=OLAK5uy_kYlCcQ8ymZlp7gZWbULbIE9ZDs91KsW9U" class="link"
+            target="_blank">
+            <span class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-2 6l6 4-6 4V8z" />
+              </svg>
+            </span>
+            YouTube Music
+          </a>
+        </li>
+
+        <!-- SoundCloud -->
+        <li>
+          <a href="https://soundcloud.com/grupo_in_verso/in-verso-rapsodia" class="link" target="_blank">
+            <span class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path
+                  d="M17.5 10.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5H6a4 4 0 010-8c.3 0 .6.03.9.1A5.5 5.5 0 0117.5 10.5z" />
+              </svg>
+            </span>
+            SoundCloud
+          </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a href="#top" class="site-footer__brand site-footer__brand--link">
+        <span class="site-footer__logo">IN VERSO</span>
+        <span class="site-footer__meta">Melodic Death Metal</span>
+      </a>
+
+      <div class="site-footer__links">
+        <a href="#top" class="link">Inicio</a>
+        <a href="privacidad.html" class="link">Política de privacidad</a>
+        <a href="sobre-in-verso.html" class="link">Sobre IN VERSO</a>
+      </div>
+
+      <div class="site-footer__copy">
+        © <span id="year"></span> IN VERSO. Todos los derechos reservados.
+        <br />
+        <small class="site-footer__credits">
+          Web creada por
+          <a href="https://draftdesignweb.com" class="link" target="_blank">
+            DRAFT Design Web
+          </a>
+        </small>
+      </div>
+      <!-- BOTÓN SUBIR ARRIBA --> <a href="#top" class="back-to-top" aria-label="Subir arriba"> ↑ </a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navToggle = document.querySelector(".main-nav__toggle");
+    const navList = document.querySelector(".main-nav__list");
+
+    if (navToggle && navList) {
+      navToggle.addEventListener("click", () => {
+        const expanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!expanded));
+        navList.classList.toggle("main-nav__list--open");
+      });
+    }
+  </script>
+
+  <!--barra de progreso-->
+  <script>
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      document.getElementById("progress-bar").style.width = progress + "%";
+    });
+  </script>
+
+</body>
+
 </html>
