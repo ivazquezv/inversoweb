@@ -611,7 +611,7 @@
         </header>
 
         <div class="grid grid--2cols">
-          <form id="contact-form" class="form" method="POST">
+          <form id="contact-form" class="form" method="POST" autocomplete="off">
             <div class="form__group">
               <label for="name" class="form__label">Nombre</label>
               <input type="text" id="name" name="from_name" class="form__input" placeholder="Tu nombre" required />
@@ -656,6 +656,12 @@
               form.addEventListener("submit", function (e) {
                 e.preventDefault();
 
+                // LOGS PARA VER SI LOS CAMPOS SE LEEN
+                console.log("DEBUG → Nombre:", form.from_name.value);
+                console.log("DEBUG → Email:", form.from_email.value);
+                console.log("DEBUG → Reason:", form.reason.value);
+                console.log("DEBUG → Message:", form.message.value);
+
                 const submitBtn = form.querySelector('button[type="submit"]');
                 submitBtn.disabled = true;
                 submitBtn.textContent = "Enviando...";
@@ -686,6 +692,7 @@
         </div>
       </div>
     </section>
+
 
     <div class="contact-info">
       <h3 class="contact-info__title">Management &amp; prensa</h3>
