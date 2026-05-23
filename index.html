@@ -611,7 +611,17 @@
         </header>
 
         <div class="grid grid--2cols">
-          <form id="contact-form" class="form" method="POST" autocomplete="off">
+          <form id="contact-form" class="form" name="contact" method="POST" autocomplete="off" data-netlify="true"
+            netlify-honeypot="bot-field">
+            <!-- Necesario para Netlify Forms -->
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none">
+              <label>
+                No rellenar:
+                <input name="bot-field" />
+              </label>
+            </p>
+
             <div class="form__group">
               <label for="name" class="form__label">Nombre</label>
               <input type="text" id="name" name="from_name" class="form__input" placeholder="Tu nombre" required />
@@ -656,7 +666,6 @@
               form.addEventListener("submit", function (e) {
                 e.preventDefault();
 
-                // LOGS PARA VER SI LOS CAMPOS SE LEEN
                 console.log("DEBUG → Nombre:", form.from_name.value);
                 console.log("DEBUG → Email:", form.from_email.value);
                 console.log("DEBUG → Reason:", form.reason.value);
@@ -692,6 +701,7 @@
         </div>
       </div>
     </section>
+
 
 
     <div class="contact-info">
