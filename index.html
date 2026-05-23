@@ -611,15 +611,16 @@
         </header>
 
         <div class="grid grid--2cols">
-          <form id="contact-form" class="form" name="contact" method="POST" autocomplete="off" data-netlify="true"
-            netlify-honeypot="bot-field">
+
+          <!-- FORMULARIO COMPATIBLE NETLIFY + EMAILJS -->
+          <form id="contact-form" class="form" name="contact" method="POST" data-netlify="true"
+            netlify-honeypot="bot-field" onsubmit="event.preventDefault(); sendEmailJS();">
             <!-- Necesario para Netlify Forms -->
             <input type="hidden" name="form-name" value="contact" />
+
+            <!-- Honeypot -->
             <p style="display:none">
-              <label>
-                No rellenar:
-                <input name="bot-field" />
-              </label>
+              <label>No rellenar: <input name="bot-field" /></label>
             </p>
 
             <div class="form__group">
@@ -653,51 +654,46 @@
             <p id="form-message" class="form-message"></p>
           </form>
 
+          <!-- EMAILJS -->
           <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
           <script>
-            (function () {
-              emailjs.init("6mnP28f-fw1y2cI3M");
-            })();
+            emailjs.init("6mnP28f-fw1y2cI3M");
 
-            document.addEventListener("DOMContentLoaded", function () {
+            function sendEmailJS() {
               const form = document.getElementById("contact-form");
               const msg = document.getElementById("form-message");
+              const submitBtn = form.querySelector('button[type="submit"]');
 
-              form.addEventListener("submit", function (e) {
-                e.preventDefault();
+              submitBtn.disabled = true;
+              submitBtn.textContent = "Enviando...";
+              msg.textContent = "";
 
-                console.log("DEBUG → Nombre:", form.from_name.value);
-                console.log("DEBUG → Email:", form.from_email.value);
-                console.log("DEBUG → Reason:", form.reason.value);
-                console.log("DEBUG → Message:", form.message.value);
+              // DEBUG
+              console.log("Nombre:", form.from_name.value);
+              console.log("Email:", form.from_email.value);
 
-                const submitBtn = form.querySelector('button[type="submit"]');
-                submitBtn.disabled = true;
-                submitBtn.textContent = "Enviando...";
-                msg.textContent = "";
+              emailjs
+                .sendForm("service_1yyeych", "template_wa8llkc", form)
+                .then(() => {
+                  msg.textContent = "Mensaje enviado correctamente. ¡Gracias!";
+                  msg.style.color = "green";
 
-                emailjs
-                  .sendForm("service_1yyeych", "template_wa8llkc", form)
-                  .then(() => {
-                    msg.textContent = "Mensaje enviado correctamente. ¡Gracias!";
-                    msg.style.color = "green";
+                  form.reset();
+                  submitBtn.disabled = false;
+                  submitBtn.textContent = "Enviar";
+                })
+                .catch((error) => {
+                  console.error("Error:", error);
+                  msg.textContent =
+                    "Ha ocurrido un error al enviar el mensaje. Inténtalo de nuevo.";
+                  msg.style.color = "red";
 
-                    form.reset();
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = "Enviar";
-                  })
-                  .catch((error) => {
-                    console.error("Error:", error);
-                    msg.textContent =
-                      "Ha ocurrido un error al enviar el mensaje. Inténtalo de nuevo.";
-                    msg.style.color = "red";
-
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = "Enviar";
-                  });
-              });
-            });
+                  submitBtn.disabled = false;
+                  submitBtn.textContent = "Enviar";
+                });
+            }
           </script>
+
         </div>
       </div>
     </section>
