@@ -618,8 +618,8 @@
             <!-- Honeypot real -->
             <input type="text" name="website" id="website" style="display:none !important">
 
-            <!-- Campo anti‑bot JS -->
-            <input type="hidden" id="human-check" name="human-check" />
+            <!-- Campo anti‑bot JS (nombre corregido) -->
+            <input type="hidden" id="human-check" name="human_check" />
 
             <div class="form__group">
               <label for="name" class="form__label">Nombre</label>
@@ -660,9 +660,12 @@
             <p id="form-message" class="form-message"></p>
           </form>
 
+          <!-- EMAILJS -->
           <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
           <script>
             emailjs.init("6mnP28f-fw1y2cI3M");
+
+            // Activar campo anti‑bot JS
             document.getElementById("human-check").value = "ok";
 
             function sendEmailJS() {
@@ -674,7 +677,7 @@
               if (form.website.value !== "") return;
 
               // JS anti-bot
-              if (form["human-check"].value !== "ok") return;
+              if (form["human_check"].value !== "ok") return;
 
               // Checkbox humano
               if (!document.getElementById("human-verify").checked) {
@@ -694,6 +697,8 @@
                   form.reset();
                   submitBtn.disabled = false;
                   submitBtn.textContent = "Enviar";
+
+                  // Reactivar campo anti‑bot
                   document.getElementById("human-check").value = "ok";
                 })
                 .catch(() => {
@@ -705,10 +710,10 @@
             }
           </script>
 
-
         </div>
       </div>
     </section>
+
 
 
 
