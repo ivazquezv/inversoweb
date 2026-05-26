@@ -600,7 +600,10 @@
     </section>
 
 
+
+
     <!-- CONTACTO -->
+    <!-- Sección de contacto con formulario, FORMSPREE + reCAPTCHA v3 y honeypot -->
     <section id="contact" class="section section--alt">
       <div class="container section__inner">
         <header class="section__header">
@@ -612,29 +615,28 @@
 
         <div class="grid grid--2cols">
 
-          <!-- COLUMNA 1: FORMULARIO -->
-          <form id="contact-form" class="form" onsubmit="event.preventDefault(); sendEmailJS();">
+          <!-- FORMULARIO -->
+          <form id="contact-form" class="form" action="https://formspree.io/f/xdajpdaw" method="POST">
 
             <!-- Honeypot real -->
-            <input type="text" name="website" id="website" style="display:none !important">
+            <input type="text" name="_gotcha" style="display:none !important">
 
-            <!-- Campo anti‑bot JS (nombre corregido) -->
-            <input type="hidden" id="human-check" name="human_check" />
+            <!-- reCAPTCHA v3 token -->
+            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 
             <div class="form__group">
-              <label for="name" class="form__label">Nombre</label>
-              <input type="text" id="name" name="from_name" class="form__input" placeholder="Tu nombre" required />
+              <label class="form__label">Nombre</label>
+              <input type="text" name="from_name" class="form__input" required>
             </div>
 
             <div class="form__group">
-              <label for="email" class="form__label">Email</label>
-              <input type="email" id="email" name="from_email" class="form__input" placeholder="tu@email.com"
-                required />
+              <label class="form__label">Email</label>
+              <input type="email" name="from_email" class="form__input" required>
             </div>
 
             <div class="form__group">
-              <label for="reason" class="form__label">Motivo</label>
-              <select id="reason" name="reason" class="form__input">
+              <label class="form__label">Motivo</label>
+              <select name="reason" class="form__input">
                 <option value="">Selecciona una opción</option>
                 <option value="Prensa / Media">Prensa / Media</option>
                 <option value="Colaboraciones">Colaboraciones</option>
@@ -643,15 +645,14 @@
             </div>
 
             <div class="form__group">
-              <label for="message" class="form__label">Mensaje</label>
-              <textarea id="message" name="message" class="form__input form__input--textarea" rows="4"
-                placeholder="Escribe tu mensaje aquí"></textarea>
+              <label class="form__label">Mensaje</label>
+              <textarea name="message" class="form__input form__input--textarea" rows="4"></textarea>
             </div>
 
             <!-- CHECKBOX HUMANO -->
             <div class="form__group">
               <label class="form__label">
-                <input type="checkbox" id="human-verify" name="human_verify" required />
+                <input type="checkbox" id="human-verify" required>
                 Confirmo que soy humano y acepto las condiciones
               </label>
             </div>
@@ -660,30 +661,16 @@
             <p id="form-message" class="form-message"></p>
           </form>
 
-          <!-- EMAILJS -->
-          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
           <!-- reCAPTCHA v3 -->
           <script
             src="https://www.google.com/recaptcha/api.js?render=6LfSJ_4sAAAAANVq0GMaam5SbRum9gNCoyqgChmU"></script>
 
           <script>
-            // Inicializar EmailJS con tu PUBLIC KEY
-            emailjs.init("epS2IDJP9nJDy8mkB");
+            const form = document.getElementById("contact-form");
+            const msg = document.getElementById("form-message");
 
-            // Activar campo anti‑bot JS
-            document.getElementById("human-check").value = "ok";
-
-            function sendEmailJS() {
-              const form = document.getElementById("contact-form");
-              const msg = document.getElementById("form-message");
-              const submitBtn = form.querySelector('button[type="submit"]');
-
-              // Honeypot
-              if (form.website.value !== "") return;
-
-              // JS anti-bot
-              if (form["human_check"].value !== "ok") return;
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
 
               // Checkbox humano
               if (!document.getElementById("human-verify").checked) {
@@ -692,54 +679,28 @@
                 return;
               }
 
-              submitBtn.disabled = true;
-              submitBtn.textContent = "Validando...";
-              msg.textContent = "";
-
               // Ejecutar reCAPTCHA v3
               grecaptcha.ready(function () {
                 grecaptcha.execute("6LfSJ_4sAAAAANVq0GMaam5SbRum9gNCoyqgChmU", { action: "submit" })
                   .then(function (token) {
+                    document.getElementById("g-recaptcha-response").value = token;
 
-                    // Añadir token al formulario
-                    let tokenInput = form.querySelector('input[name="g-recaptcha-response"]');
-                    if (!tokenInput) {
-                      tokenInput = document.createElement("input");
-                      tokenInput.type = "hidden";
-                      tokenInput.name = "g-recaptcha-response";
-                      form.appendChild(tokenInput);
-                    }
-                    tokenInput.value = token;
-
-                    // Enviar EmailJS
-                    submitBtn.textContent = "Enviando...";
-
-                    emailjs.sendForm("service_1yyeych", "template_wa8llkc", form)
-                      .then(() => {
-                        msg.textContent = "Mensaje enviado correctamente. ¡Gracias!";
-                        msg.style.color = "green";
-                        form.reset();
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = "Enviar";
-
-                        // Reactivar campo anti‑bot
-                        document.getElementById("human-check").value = "ok";
-                      })
-                      .catch(() => {
-                        msg.textContent = "Ha ocurrido un error al enviar el mensaje.";
-                        msg.style.color = "red";
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = "Enviar";
-                      });
+                    // Enviar formulario a Formspree
+                    form.submit();
                   });
               });
-            }
+            });
           </script>
-
-
 
         </div>
       </div>
+    </section>
+
+
+
+
+    </div>
+    </div>
     </section>
 
 
