@@ -672,25 +672,22 @@
             form.addEventListener("submit", function (e) {
               e.preventDefault();
 
-              // Checkbox humano
               if (!document.getElementById("human-verify").checked) {
                 msg.textContent = "Debes confirmar que eres humano.";
                 msg.style.color = "red";
                 return;
               }
 
-              // Ejecutar reCAPTCHA v3
               grecaptcha.ready(function () {
                 grecaptcha.execute("6LdlL_4sAAAAAFQ6XXkQZEPWdl9i1GAu6KGKxaqc", { action: "submit" })
                   .then(function (token) {
                     document.getElementById("g-recaptcha-response").value = token;
-
-                    // Enviar formulario a Formspree
                     form.submit();
                   });
               });
             });
           </script>
+
 
 
 
