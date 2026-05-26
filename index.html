@@ -662,8 +662,9 @@
           </form>
 
           <!-- reCAPTCHA v3 -->
+          <!-- reCAPTCHA v3 -->
           <script
-            src="https://www.google.com/recaptcha/api.js?render=6LfSJ_4sAAAAANVq0GMaam5SbRum9gNCoyqgChmU"></script>
+            src="https://www.google.com/recaptcha/api.js?render=6LdlL_4sAAAAAFQ6XXkQZEPWdl9i1GAu6KGKxaqc"></script>
 
           <script>
             const form = document.getElementById("contact-form");
@@ -681,7 +682,7 @@
 
               // Ejecutar reCAPTCHA v3
               grecaptcha.ready(function () {
-                grecaptcha.execute("6LfSJ_4sAAAAANVq0GMaam5SbRum9gNCoyqgChmU", { action: "submit" })
+                grecaptcha.execute("6LdlL_4sAAAAAFQ6XXkQZEPWdl9i1GAu6KGKxaqc", { action: "submit" })
                   .then(function (token) {
                     document.getElementById("g-recaptcha-response").value = token;
 
@@ -691,6 +692,7 @@
               });
             });
           </script>
+
 
         </div>
       </div>
