@@ -20,6 +20,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Inter:wght@300;400;500;700&display=swap"
     rel="stylesheet" />
+
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdStf8sAAAAAG-TsvKhSJ9JxjqL-u6hlQFVxoNJ"></script>
 </head>
 
 <body>
@@ -851,6 +853,15 @@
       const progress = (scrollTop / docHeight) * 100;
       document.getElementById("progress-bar").style.width = progress + "%";
     });
+  </script>
+
+  <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6LdStf8sAAAAAG-TsvKhSJ9JxjqL-u6hlQFVxoNJ', { action: 'LOGIN' });
+      });
+    }
   </script>
 
 </body>
