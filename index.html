@@ -21,7 +21,6 @@
     href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Inter:wght@300;400;500;700&display=swap"
     rel="stylesheet" />
 
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdStf8sAAAAAG-TsvKhSJ9JxjqL-u6hlQFVxoNJ"></script>
 </head>
 
 <body>
@@ -663,42 +662,10 @@
             <p id="form-message" class="form-message"></p>
           </form>
 
-          <!-- reCAPTCHA v3 -->
-          <script
-            src="https://www.google.com/recaptcha/api.js?render=6LdlL_4sAAAAAFQ6XXkQZEPWdl9i1GAu6KGKxaqc"></script>
-
-          <script>
-            const form = document.getElementById("contact-form");
-            const msg = document.getElementById("form-message");
-
-            form.addEventListener("submit", function (e) {
-              e.preventDefault();
-
-              if (!document.getElementById("human-verify").checked) {
-                msg.textContent = "Debes confirmar que eres humano.";
-                msg.style.color = "red";
-                return;
-              }
-
-              grecaptcha.ready(function () {
-                grecaptcha.execute("6LdlL_4sAAAAAFQ6XXkQZEPWdl9i1GAu6KGKxaqc", { action: "submit" })
-                  .then(function (token) {
-                    document.getElementById("g-recaptcha-response").value = token;
-                    form.submit();
-                  });
-              });
-            });
-          </script>
-
-
-
 
         </div>
       </div>
     </section>
-
-
-
 
     </div>
     </div>
@@ -829,6 +796,31 @@
     </div>
   </footer>
 
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lcayf8sAAAAALdmaykHUDgq3Rpyx-ncVu9JIbG3"></script>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const msg = document.getElementById("form-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (!document.getElementById("human-verify").checked) {
+        msg.textContent = "Debes confirmar que eres humano.";
+        msg.style.color = "red";
+        return;
+      }
+
+      grecaptcha.ready(function () {
+        grecaptcha.execute("6Lcayf8sAAAAALdmaykHUDgq3Rpyx-ncVu9JIbG3", { action: "submit" })
+          .then(function (token) {
+            document.getElementById("g-recaptcha-response").value = token;
+            form.submit();
+          });
+      });
+    });
+  </script>
+
   <!-- SCRIPT -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -855,35 +847,8 @@
     });
   </script>
 
-  <!-- reCAPTCHA v3 -->
-  <script src="https://www.google.com/recaptcha/api.js?render=6Lcayf8sAAAAALdmaykHUDgq3Rpyx-ncVu9JIbG3"></script>
 
-  <script>
-    const form = document.getElementById("contact-form");
-    const msg = document.getElementById("form-message");
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      // Checkbox humano
-      if (!document.getElementById("human-verify").checked) {
-        msg.textContent = "Debes confirmar que eres humano.";
-        msg.style.color = "red";
-        return;
-      }
-
-      // Ejecutar reCAPTCHA v3
-      grecaptcha.ready(function () {
-        grecaptcha.execute("6Lcayf8sAAAAALdmaykHUDgq3Rpyx-ncVu9JIbG3", { action: "submit" })
-          .then(function (token) {
-            document.getElementById("g-recaptcha-response").value = token;
-
-            // Enviar formulario a Formspree
-            form.submit();
-          });
-      });
-    });
-  </script>
 
 
 </body>
